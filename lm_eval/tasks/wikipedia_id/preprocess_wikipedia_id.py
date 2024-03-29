@@ -2,7 +2,7 @@ import re
 
 
 def wikipedia_id_detokenizer(doc):
-    string = doc["page"]
+    string = doc["text"]
     # contractions
     string = string.replace("s '", "s'")
     string = re.sub(r"/' [0-9]/", r"/'[0-9]/", string)
@@ -39,8 +39,8 @@ def wikipedia_id_detokenizer(doc):
 def process_results(doc, results):
     (loglikelihood,) = results
     # IMPORTANT: wikipedia_id counts number of words in *original doc before detokenization*
-    _words = len(re.split(r"\s+", doc["page"]))
-    _bytes = len(doc["page"].encode("utf-8"))
+    _words = len(re.split(r"\s+", doc["text"]))
+    _bytes = len(doc["text"].encode("utf-8"))
     return {
         "word_perplexity": (loglikelihood, _words),
         "byte_perplexity": (loglikelihood, _bytes),

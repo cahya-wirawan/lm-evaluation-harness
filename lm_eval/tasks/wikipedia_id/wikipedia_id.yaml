@@ -1,10 +1,10 @@
 task: wikipedia_id
-dataset_path: bigscience-data/roots_id_wikipedia
+dataset_path: cahya/kompas-2013
 dataset_name: null
 output_type: loglikelihood_rolling
 training_split: train
 validation_split: null
-test_split: null
+test_split: test
 doc_to_text: ""
 doc_to_target: !function preprocess_wikipedia_id.wikipedia_id_detokenizer
 process_results: !function preprocess_wikipedia_id.process_results
