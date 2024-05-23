@@ -1,0 +1,3 @@
+include: indobench_copal_id.yaml
+task: indobench_copal_id_colloquial
+test_split: test_colloquial
