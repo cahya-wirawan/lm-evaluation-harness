@@ -2,7 +2,7 @@ group:
   - mlbench
 task: mlbench_wikipedia_su
 dataset_path: indonesian-nlp/wikipedia-10k
-dataset_name: wikipedia_su
+dataset_name: wikipedia-su
 output_type: loglikelihood_rolling
 training_split: null
 validation_split: null
